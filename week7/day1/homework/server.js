@@ -24,6 +24,14 @@ app.get("/greeting/:name", (req, res) => {
     res.send(`Oh, hey there ${name}! Good to see you.`)
 })
 
+app.get("/tip/:total/:tipPercentage", (req, res) => {
+
+    const total = req.params.total
+    const tipPercentage = req.params.tipPercentage
+    res.send(`Your tip will be ${total * (.01 * tipPercentage)}`)
+    
+})
+
 ///////////////////////////
 // Server Listener
 ///////////////////////////
