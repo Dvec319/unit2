@@ -17,22 +17,21 @@ const app = express()
 app.get("/", (req, res) => {
     res.send(`
         <h1>99 Bottles of beer on the wall.</h1>
-        <a href="http://localhost:3000/98">take one down, pass it around</a>
+        <a href="/98">take one down, pass it around</a>
     `);
 })
 
 app.get("/:number_of_bottles", (req, res) => {
-    const number = req.params.number_of_bottles
-    const newNumber = number - 1
+    let number = req.params.number_of_bottles
     if (number > 0) {
         res.send(`
             <h1>${number} Bottles of beer on the wall.</h1>
-            <a href="http://localhost:3000/${newNumber}">take one down, pass it around</a>
+            <a href="${number - 1}">take one down, pass it around</a>
         `);
     } else {
         res.send(`
             <h1>0 Bottles of beer on the wall.</h1>
-            <a href="http://localhost:3000/">Start over</a>
+            <a href="/">Start over</a>
         `);
     }
 })
