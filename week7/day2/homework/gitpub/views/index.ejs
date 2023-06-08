@@ -10,10 +10,20 @@
             color: salmon;
             background-color: royalblue;
         }
+
+        li {
+            text-transform: capitalize;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome to gitPub</h1>
+
+    <ul>
+        <% for (let i = 0; i < drinks.length; i++) { %>
+            <li><a href="/drinks/<%= i %>"><%= drinks[i].name %></a></li>
+        <% } %>
+    </ul>
     
 </body>
 </html>
