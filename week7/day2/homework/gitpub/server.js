@@ -29,6 +29,12 @@ app.get("/drinks", (req, res) => {
     res.render("index.ejs", {drinks})
 })
 
+app.get("/drinks/:id", (req, res) => {
+    const id = req.params.id
+    const drink = drinks[id]
+    res.send(id)
+})
+
 ///////////////////////////
 // Server Listener
 ///////////////////////////
