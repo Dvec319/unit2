@@ -1,6 +1,7 @@
 body {
     color: salmon;
     background-color: royalblue;
+    margin: 0;
 }
 
 h1 {
@@ -18,4 +19,5 @@ h3 {
 
 li {
     text-transform: capitalize;
+    font-size: 30px;
 }
