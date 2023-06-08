@@ -15,6 +15,7 @@ const app = express() // express application
 //////////////////////
 
 app.use(morgan("dev")) // sets up our logging middleware
+app.use(express.static("public")) // treat the public folder as a static file server
 
 
 ///////////////////////

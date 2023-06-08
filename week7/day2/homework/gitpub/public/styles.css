@@ -1,0 +1,21 @@
+body {
+    color: salmon;
+    background-color: royalblue;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+li {
+    text-transform: capitalize;
+}
