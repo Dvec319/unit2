@@ -13,9 +13,16 @@ const app = express()
 // Declare Middleware
 //////////////////////
 
+app.use(morgan("dev"))
+
+
 ///////////////////////
 // Declare Routes and Routers
 ///////////////////////
+
+app.get("/", (req, res) => {
+    res.send('Welcome to the Gitpub App!')
+})
 
 ///////////////////////////
 // Server Listener
