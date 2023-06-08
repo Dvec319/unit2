@@ -23,7 +23,10 @@ app.use(express.static("public")) // treat the public folder as a static file se
 ///////////////////////
 
 app.get("/", (req, res) => {
-    res.send('Welcome to the Gitpub App!')
+    res.send(`
+    <h1>Welcome to the Gitpub App! Not much to see here though.</h1>
+    <a href="/drinks"> You should probably click right here!</a>
+    `)
 })
 
 // Index - Get - Lists all the drinks - /drinks
