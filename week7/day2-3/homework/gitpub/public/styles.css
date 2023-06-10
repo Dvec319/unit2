@@ -1,4 +1,8 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: salmon;
     background-color: royalblue;
     margin: 0;
@@ -17,7 +21,17 @@ h3 {
     font-size: 40px;
 }
 
+ul {
+    padding: 0;
+}
+
 li {
+    list-style: none;
     text-transform: capitalize;
     font-size: 30px;
+}
+
+img {
+    height: 50%;
+    width: 50%;
 }

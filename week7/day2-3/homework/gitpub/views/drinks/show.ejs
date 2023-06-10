@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= drink.name %></title>
-    <%- include("import.ejs") %>
+    <%- include("../import.ejs") %>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <img src="<%= drink.image %>.png" alt="<%= drink.name %>">
     <h3><%= drink.price %></h3>
 
-    <a href="/drinks">Back</a>
+    <a href="/drinks&foods">Back</a>
 </body>
 
 </html>

@@ -9,10 +9,16 @@
 </head>
 <body>
     <h1>Welcome to gitPub</h1>
-
+    <img src="https://i.imgur.com/MfZn3wW.png" alt="beer pouring into a glass">
     <ul>
         <% for (let i = 0; i < drinks.length; i++) { %>
             <li><a href="/drinks/<%= i %>"><%= drinks[i].name %></a></li>
+        <% } %>
+    </ul>
+
+    <ul>
+        <% for (let i = 0; i < foods.length; i++) { %>
+            <li><a href="/food/<%= i %>"><%= foods[i].name %></a></li>
         <% } %>
     </ul>
     
