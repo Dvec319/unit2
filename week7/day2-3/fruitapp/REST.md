@@ -1,4 +1,5 @@
 # REST
+
 ### REspresentational State Transfer
 
 ## What is Rest?
@@ -6,18 +7,20 @@
 REST is an architectural pattern for designing API (Application Programming Interface).
 
 Basically
+
 - What routes should I make
 - What should those routes do
 
 ## The Basics
 
-Every application is going to be made up of many 
+Every application is going to be made up of many
 
 models/resources/entities
 
 - The units of data your application works with.
 
 For example:
+
 - Blogs
 - Photos
 
@@ -62,6 +65,7 @@ To remember... think INDUCES
 This is an application architectural pattern about how to divide up the functionality of your code.
 
 Break up all the code into three buckets:
+
 - Models (Code that relates to defining and working with your data)
 - Views (Code that describes the user interface)
 - Controllers (Code that coordinates data from the models into the views)

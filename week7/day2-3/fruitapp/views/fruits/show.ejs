@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= fruit.name %></title>
-    <%- include("imports.ejs") %>
+    <%- include("../imports.ejs") %>
 </head>
 <body>
     <h1>name: <%= fruit.name %>
@@ -14,6 +14,10 @@
         <li>color: <%= fruit.color %></li>
         <li>readyToEat: <%= fruit.readyToEat %></li>
     </ul>
+    <a href="/fruit/<%= id %>/edit"><button>Edit</button></a>
+    <form action="/fruit/<%= id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete"/>
+    </form>
     <h3><a href="/fruit">Go back to the list of fruits</a></h3>
 </body>
 </html>
