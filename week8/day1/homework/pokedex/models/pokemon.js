@@ -1,4 +1,4 @@
-pokemon = [
+allPokemon = [
 	{
 		id: '001',
 		name: 'Bulbasaur',
@@ -61604,4 +61604,4 @@ pokemon = [
 	},
 ];
 
-module.exports = pokemon
+module.exports = allPokemon

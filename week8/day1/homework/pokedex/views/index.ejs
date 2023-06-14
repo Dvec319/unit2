@@ -14,7 +14,7 @@
     <div id="cards">
         <% for (let i = 0; i < allPokemon.length; i++) { %>
             <div class="card">
-                <a href="/pokemon/<%= i %>"><img class="card-img" src="<%= allPokemon[i].img %>"></a>
+                <a href="/<%= i %>"><img class="card-img" src="<%= allPokemon[i].img %>" alt="<%= allPokemon[i].name %>"></a>
             </div>
         <% } %>
     </div>

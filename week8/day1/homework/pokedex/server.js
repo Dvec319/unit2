@@ -16,22 +16,24 @@ const allPokemon = require("./models/pokemon")
 
 app.use(morgan("dev")) // logging middleware
 app.use(express.static("public")) // treat the public folder as a static file server
-// app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: false}))
 
 
 ///////////////////////
 // Declare Routes and Routers  INDUCES - Index, New, Delete, Update, Create, Edit, Show
 ///////////////////////
 
-// Index - Get - 
+// Index - Get - List all Pokemon - /pokemon
 app.get('/pokemon', (req, res) => {
     res.render('index.ejs', {allPokemon})
 })
 
-// Show - Get - 
-app.get('/pokemon/:id', (req, res) => {
-    const id = req.params.id
-    const pokemon = allPokemon[id]
+// Show - Get - Show one Pokemon - /pokemon/:id
+app.get('/:id', (req, res) => {
+    const id = req.params.id;
+    
+    const pokemon = allPokemon[id];
+    
     res.render('show.ejs', {pokemon, id})
 })
 
