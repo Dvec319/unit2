@@ -10,9 +10,9 @@ const router = express.Router();
 router.get('/:id', (req, res) => {
 	// grab the id from the url
 	const id = req.params.id;
-	// create a variable with the food specified
+	// create a variable with the drink specified
 	const drink = drinks[id];
-	// render a template with the food
+	// render a template with the drink
 	res.render('drinks/show.ejs', {drink, id});
 });
 

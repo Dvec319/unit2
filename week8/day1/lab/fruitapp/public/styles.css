@@ -1,0 +1,14 @@
+body {
+    background-color: grey;
+}
+
+h1 {
+    background-color: brown;
+    color: white;
+    padding: 5px;
+}
+
+li {
+    font-size: 1.1em;
+    font-weight: 900;
+}
