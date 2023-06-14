@@ -1,0 +1,40 @@
+* {
+    /* outline: solid gold; */
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: sienna;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+}
+
+h1 {
+    font-size: 75px;
+    background-color: aqua;
+    color: salmon;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 10px auto;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 10%;
+    height: 200px;
+    margin: 30px 30px 30px 30px;
+}
+
+.card-img {
+    width: 70%;
+    height: 100%;
+}
