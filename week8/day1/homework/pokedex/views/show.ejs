@@ -17,10 +17,16 @@
             <img src="<%= pokemon.img %>" alt="<%= pokemon.name %>">
             <h2>ID: #<%= pokemon.id %></h2>
             <h2>Name: <%= pokemon.name %></h2>
-            <h2>Types: </h2>
+            <h2>Types:
+                <% for (let i = 0; i < pokemon.type.length; i++) { %>
+                    <ul>
+                        <li><%= pokemon.type[i] %></li>
+                    </ul>
+                <% } %>
+            </h2>
         </div>
         <div class="card">
-            <h2>Stats</h2>
+            <h2>Stats:</h2>
             <ul>
                 <li>HP: <%= pokemon.stats.hp %></li>
                 <li>ATTACK: <%= pokemon.stats.attack %></li>

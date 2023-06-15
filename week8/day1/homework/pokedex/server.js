@@ -29,6 +29,16 @@ app.get('/pokemon', (req, res) => {
     res.render('index.ejs', {allPokemon})
 })
 
+// New - Get - Show a form to make a new Pokemon
+
+// Destroy - Delete - Delete a Pokemon
+
+// Update - Put - Update a Pokemon
+
+// Create - Post - Create a Pokemon
+
+// Edit - Get - Render form to update a Pokemon
+
 // Show - Get - Show one Pokemon - /pokemon/:id
 app.get('/pokemon/:id',  (req, res) => {
     const id = req.params.id;

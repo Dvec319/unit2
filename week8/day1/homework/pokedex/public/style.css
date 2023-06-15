@@ -16,6 +16,14 @@ h1 {
     color: salmon;
 }
 
+h2 {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
 #cards {
     display: flex;
     justify-content: space-around;
@@ -33,4 +41,13 @@ h1 {
 .card-img {
     width: 70%;
     height: 100%;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    font-size: 30px;
+    list-style-type: none;
 }
