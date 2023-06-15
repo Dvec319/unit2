@@ -15,7 +15,8 @@ const allPokemon = require("./models/pokemon")
 //////////////////////
 
 app.use(morgan("dev")) // logging middleware
-app.use(express.static("public")) // treat the public folder as a static file server
+app.use( express.static("public")) // treat the public folder as a static file server
+// app.use("/public", express.static("public")) // treat the public folder as a static file server
 app.use(express.urlencoded({extended: false}))
 
 
@@ -29,10 +30,10 @@ app.get('/pokemon', (req, res) => {
 })
 
 // Show - Get - Show one Pokemon - /pokemon/:id
-app.get('/:id', (req, res) => {
+app.get('/pokemon/:id',  (req, res) => {
     const id = req.params.id;
     
-    const pokemon = allPokemon[id];
+    const pokemon =  allPokemon[id];
     
     res.render('show.ejs', {pokemon, id})
 })

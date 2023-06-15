@@ -29,55 +29,72 @@ router.get("/new", (req, res) => {
 })
 
 // Destroy - Delete - Delete a fruit
-router.delete("/:id", (req, res) => {
+router.delete("/:id", async (req, res) => {
   // grab the id from the url
   const id = req.params.id
   // splice the object out of the array
-  fruits.splice(id, 1)
+  // fruits.splice(id, 1)
+
+    await Fruits.findByIdAndDelete(id)
+
   // redirect user back to index
   res.redirect("/fruit")
 })
 
 // Update - Put - Update a fruit
-router.put("/:id", (req, res) => {
+router.put("/:id", async (req, res) => {
     // get the id from the url
     const id = req.params.id
     // make sure readyToEat is a boolean
     req.body.readyToEat = req.body.readyToEat === "on" ? true : false
     // swap the current version with the new version in the array
-    fruits[id] = req.body
+    // fruits[id] = req.body
+
+    await Fruits.findByIdAndUpdate(id, req.body)
+
     // redirect the user back to the index page
     res.redirect("/fruit")
 })
 
 // Create - Post - Create a fruit
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
     // turn the ready to eat property into a boolean
     // expression ? True : False
     req.body.readyToEat = req.body.readyToEat === "on" ? true : false
     // push the new fruit into the array
-    fruits.push(req.body)
+    // fruits.push(req.body)
+    // send user back to index page
+
+    await Fruits.create(req.body)
+
+
     // send user back to the index page
     res.redirect("/fruit")
 })
 
 // Edit - Get - Render form to update a fruit
-router.get("/:id/edit", (req, res) => {
+router.get("/:id/edit", async (req, res) => {
     // get the index of the specified fruit
     const id = req.params.id
     // get the fruit using the index
-    const fruit = fruits[id]
+    // const fruit = fruits[id]
+
+    const fruit = await Fruits.findById(id)
+
     // render the template and pass the fruit and index
     res.render("fruits/edit.ejs", {fruit, id})
 })
 
 
 // Show - Get - Shows one fruit - /fruit/:id
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
 	// grab the id from the url
 	const id = req.params.id;
 	// create a variable with the fruit specified
-	const fruit = fruits[id];
+	// const fruit = fruits[id];
+
+    const fruit = await Fruits.findById(id)
+
 	// render a template with the fruit
 	res.render('fruits/show.ejs', {fruit, id});
 });
