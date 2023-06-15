@@ -36,6 +36,11 @@ app.get('/pokemon/new', (req, res) => {
 })
 
 // Destroy - Delete - Delete a Pokemon
+app.delete('/pokemon/:id', (req, res) => {
+    const id = req.params.id
+    allPokemon.splice(id, 1)
+    res.redirect('/pokemon')
+})
 
 // Update - Put - Update a Pokemon
 
