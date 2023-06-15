@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Pokemon</title>
+    <%- include("imports.ejs") %>
+</head>
+<body>
+    <header>
+        <h1>The Pokemon Manager</h1>
+        <a href="/pokemon"><h1>Home</h1></a>
+    </header>
+    <h2>Create a New Pokemon</h2>
+    <label for="pokemonpic">Image of Pokemon</label>
+    <form action="/pokemon" method="post">
+        <input type="file" id="pokemonpic" name="img" accept="image/png, image/jpeg"/>
+        <input type="number" name="id" placeholder="ID of Pokemon"/>
+        <input type="text" name="name" placeholder="Name of Pokemon"/>
+        <input type="text" name="type" placeholder="Types of the Pokemon"/>
+        <input type="number" name="HP" placeholder="HP of Pokemon"/>
+        <input type="number" name="ATTACK" placeholder="Attack of Pokemon">
+        <input type="number" name="DEFENSE" placeholder="Defense of Pokemon">
+        <input type="number" name="SPATTACK" placeholder="SPAttack of Pokemon">
+        <input type="number" name="SPDEFENSE" placeholder="SPDefense of Pokemon">
+        <input type="number" name="SPEED" placeholder="Speed of Pokemon">
+        <input type="submit" value="Create Pokemon"/>
+    </form>
+    
+</body>
+</html>
