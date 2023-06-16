@@ -12,18 +12,18 @@
         <a href="/pokemon"><h1>Home</h1></a>
     </header>
     <h2>Create a New Pokemon</h2>
-    <label for="pokemonpic">Image of Pokemon</label>
+    <label for="url">Picture of Pokemon</label>
     <form action="/pokemon" method="post">
-        <input type="file" id="pokemonpic" name="img" accept="image/png, image/jpeg"/>
-        <input type="number" name="id" placeholder="ID of Pokemon"/>
-        <input type="text" name="name" placeholder="Name of Pokemon"/>
-        <input type="text" name="type" placeholder="Types of the Pokemon"/>
-        <input type="number" name="HP" placeholder="HP of Pokemon"/>
-        <input type="number" name="ATTACK" placeholder="Attack of Pokemon">
-        <input type="number" name="DEFENSE" placeholder="Defense of Pokemon">
-        <input type="number" name="SPATTACK" placeholder="SPAttack of Pokemon">
-        <input type="number" name="SPDEFENSE" placeholder="SPDefense of Pokemon">
-        <input type="number" name="SPEED" placeholder="Speed of Pokemon">
+        <input type="url" name="img" id="url" placeholder="https://example.com">
+        ID :<input type="text" name="id" placeholder="ID of Pokemon"/>
+        Name: <input type="text" name="name" placeholder="Name of Pokemon"/>
+        Type/Types: <input type="text" name="type" placeholder="Example: Grass Poison"/>
+        HP: <input type="number" name="hp" placeholder="HP of Pokemon"/>
+        Attack: <input type="number" name="attack" placeholder="Attack of Pokemon">
+        Defense: <input type="number" name="defense" placeholder="Defense of Pokemon">
+        SPAttack: <input type="number" name="spattack" placeholder="SPAttack of Pokemon">
+        SPDefense: <input type="number" name="spdefense" placeholder="SPDefense of Pokemon">
+        Speed: <input type="number" name="speed" placeholder="Speed of Pokemon">
         <input type="submit" value="Create Pokemon"/>
     </form>
     
