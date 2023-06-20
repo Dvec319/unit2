@@ -11,9 +11,9 @@
         <h1>The Pokemon Manager</h1>
         <a href="/pokemon"><h1>Home</h1></a>
     </header>
-    <h2>Create a New Pokemon</h2>
-    <label for="url">Picture of Pokemon</label>
     <form action="/pokemon/<%= id %>?_method=PUT" method="post">
+        <h2>Create a New Pokemon</h2>
+        <label for="url">Picture of Pokemon</label>
         <input type="url" name="img" id="url" value="<%= pokemon.img %>">
         ID: <input type="text" name="id" value="<%= pokemon.id %>" />
         Name: <input type="text" name="name" value="<%= pokemon.name %>" />
